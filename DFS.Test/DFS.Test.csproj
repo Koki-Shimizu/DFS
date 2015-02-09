@@ -49,6 +49,7 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="BFSTest.cs" />
     <Compile Include="DFSTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
