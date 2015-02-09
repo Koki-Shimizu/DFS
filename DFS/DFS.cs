@@ -27,7 +27,7 @@ namespace DFS
 
         private void Visit(Node root)
         {
-            throw new NotImplementedException();
+            // nop
         }
     }
 }
