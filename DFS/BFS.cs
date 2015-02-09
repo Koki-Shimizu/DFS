@@ -18,9 +18,9 @@ namespace DFS
             while(queue.Count != 0)
             {
                 var current_node = queue.Dequeue();
-                if (current_node.Adjacent != null)
+                if (current_node.Children != null)
                 { 
-                    foreach (var node in current_node.Adjacent)
+                    foreach (var node in current_node.Children)
                     {
                         if(!node.Visited)
                         {

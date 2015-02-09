@@ -11,7 +11,7 @@ namespace DFS.Test
         {
             // Arrange
             var target = new Node();
-            target.Adjacent = new Node[] { new Node(), new Node(){ Adjacent = new Node[]{ new Node(), new Node()} }, new Node() };
+            target.Children = new Node[] { new Node(), new Node(){ Children = new Node[]{ new Node(), new Node()} }, new Node() };
 
             // Act
             DFS.Search(target);
@@ -23,9 +23,9 @@ namespace DFS.Test
         private void AssertNode(Node node)
         {
             Assert.IsTrue(node.Visited);
-            if (node.Adjacent != null)
+            if (node.Children != null)
             { 
-                foreach (var n in node.Adjacent)
+                foreach (var n in node.Children)
                 {
                     Assert.IsTrue(n.Visited);
                     AssertNode(n);

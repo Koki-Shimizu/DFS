@@ -9,6 +9,6 @@ namespace DFS
     {
         public bool Visited { get; set; }
 
-        public Node[] Adjacent { get; set; }
+        public Node[] Children { get; set; }
     }
 }

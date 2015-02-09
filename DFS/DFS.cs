@@ -16,9 +16,9 @@ namespace DFS
             }
             Visit(root);
             root.Visited = true;
-            if (root.Adjacent != null)
+            if (root.Children != null)
             { 
-                foreach (var node in root.Adjacent)
+                foreach (var node in root.Children)
                 {
                     if(!node.Visited)
                     {
