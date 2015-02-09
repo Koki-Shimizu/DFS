@@ -8,7 +8,7 @@ namespace DFS
 {
     public class DFS
     {
-        public void Search( Node root )
+        public static void Search( Node root )
         {
             if(root == null)
             {
@@ -16,16 +16,19 @@ namespace DFS
             }
             Visit(root);
             root.Visited = true;
-            foreach (var node in root.Adjacent)
-            {
-                if(!node.Visited)
+            if (root.Adjacent != null)
+            { 
+                foreach (var node in root.Adjacent)
                 {
-                    Search(node);
+                    if(!node.Visited)
+                    {
+                        Search(node);
+                    }
                 }
             }
         }
 
-        private void Visit(Node root)
+        private static void Visit(Node root)
         {
             // nop
         }
